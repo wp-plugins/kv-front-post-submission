@@ -9,7 +9,7 @@ Stable tag: 3.2
 
 
 == Description ==
- It helps to submit your posts from your theme front end. Also you can have few admin options to configure your settings. Still its a minimum pack, i will update full control to navigate these things. 
+ It helps to submit your posts from your theme front end. Also you can have few admin options to configure your settings. Still its a minimum pack, i will update full control to navigate these things. Read  <a href="http://kvcodes.com/2014/02/front-end-post-submission-wordpress/" > Kvcodes </a> 
 
 == Installation ==
 
