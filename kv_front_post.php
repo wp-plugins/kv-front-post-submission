@@ -14,6 +14,10 @@ global  $wpdb ;
 function kv_admin_menu() { 		
 	 add_menu_page('Kv Settings', 'Kv Settings', 'manage_options', basename(__FILE__) , 'kv_admin_settings', KV_PLUGIN_URL.'/images/kv_logo.png', 66);
 	// add_submenu_page( 'Kv Settings', 'Settings', 'Settings', 'manage_options', 'initial_settings_callfn', 'kv_settings_page' );
+	
+	add_option('kv_post_status', 'Publish');
+	add_option('kv_media_button', 'true'); 
+	add_option('kv_richtext_editor', 'Yes');
 	 //add_action("load-{$settings_page}", 'kv_admin_settings');
 }
 add_action('admin_menu', 'kv_admin_menu');
@@ -36,7 +40,7 @@ function kv_admin_settings() {
 		<div class="welcome-panel">
 		<?php //kv_admin_thirty_day_chart () ; ?>
 		Thank you for using KV Front post Submission Plugin <p>
-		<a href="http://www.kvcodes.com/" target="_blank" ><h3>Setup Guide</h3></a></p> 
+		<a href="http://kvcodes.com/2014/02/front-end-post-submission-wordpress/" target="_blank" ><h3>Setup Guide</h3></a></p> 
 		</div> 
 		<div id="dashboard-widget-wrap" >
 			<div id="dashboard-widgets" class="metabox-holder columns-2" >
@@ -146,7 +150,7 @@ function kv_page_register() {
 			'post_type' =>'page',		
 			'post_name' => $submit_page['slug'],
 			'post_content' => '[kv_submit_post]',
-			'post_status' => get_option('kv_post_status'),
+			'post_status' => 'publish',
 			'comment_status' => 'closed',
 			'ping_status' => 'closed',
 			
@@ -183,7 +187,7 @@ function kv_front_post_creation() {
 		'post_content'	=>	$description,
 		'post_category'	=>	array($_POST['cat']),  // Usable for custom taxonomies too
 		'tags_input'	=>	array($tags),
-		'post_status'	=>	'publish',           // Choose: publish, preview, future, draft, etc.
+		'post_status'	=>	 get_option('kv_post_status'),           // Choose: publish, preview, future, draft, etc.
 		'post_type'	=>	'post'  //'post',page' or use a custom post type if you want to
 		);
 
