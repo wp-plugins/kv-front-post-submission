@@ -2,9 +2,9 @@
 Contributor: Varadharaj
 Donate link: http://www.kvcodes.com
 Tags: front end post, pages, post submit, 
-Requires at least: 3.7
+Requires at least: 3.0
 Tested up to: 3.5
-Stable tag: 3.2
+Stable tag: 1.0
 
 
 
