@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: KV Front-end Post Submission
-Plugin URI: https://kvcodes.com	
+Plugin URI: http://wordpress.org/plugins/kv-front-post-submission/
 Description: A simple wordpress plugin for front-end post submission
 Version: 1.0
 Author: Varadharaj	
@@ -149,6 +149,7 @@ function kv_page_register() {
 			'post_status' => get_option('kv_post_status'),
 			'comment_status' => 'closed',
 			'ping_status' => 'closed',
+			
 			'post_excerpt' => 'Custom page For Front end Post Publishing! '	
 		));
 	} 		
