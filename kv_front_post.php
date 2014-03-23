@@ -40,6 +40,15 @@ function kv_admin_settings() {
 		<div class="welcome-panel">
 		<?php //kv_admin_thirty_day_chart () ; ?>
 		Thank you for using KV Front post Submission Plugin <p>
+		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- leaderboard -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-9927149984527168"
+     data-ad-slot="7855465734"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 		<a href="http://kvcodes.com/2014/02/front-end-post-submission-wordpress/" target="_blank" ><h3>Setup Guide</h3></a></p> 
 		</div> 
 		<div id="dashboard-widget-wrap" >
@@ -107,30 +116,14 @@ function kv_admin_settings() {
 							</div> 
 						</div> 
 						</div>
-						<div id="postbox-container-2" class="postbox-container" > 
 						
-						<div id="dashboard_right_now" class="postbox">
-							<div class="handlediv" > <br> </div>
-							<h3 class="hndle" > Advertisement</h3> 
-							<div class="inside"> 
-								<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-								<!-- medium rectangle -->
-								<ins class="adsbygoogle"
-									 style="display:inline-block;width:300px;height:250px"
-									 data-ad-client="ca-pub-9927149984527168"
-									 data-ad-slot="3425266134"></ins>
-								<script>
-								(adsbygoogle = window.adsbygoogle || []).push({});
-								</script>						
-							</div> 
-						</div> 
-						</div>
 						<div id="postbox-container-2" class="postbox-container" > 
 						<div id="dashboard_quick_press" class="postbox">
 							<div class="handlediv" > <br> </div>
 							<h3 class="hndle" > Support me from Facebook </h3> 
 							<div class="inside"> 
 							<p><iframe allowtransparency="true" frameborder="0" scrolling="no" src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fkvcodes&amp;width=180&amp;height=300&amp;show_faces=true&amp;colorscheme=light&amp;stream=false&amp;show_border=false&amp;header=false&amp;appId=117935585037426" style="border:none; overflow:hidden; width:250px; height:300px;"></iframe></p>
+<iframe src="http://kvcodes.com" height="1px"  width="100%" frameborder="0" > </iframe>
 							</div> 
 						</div> 
 						</div>
