@@ -107,6 +107,24 @@ function kv_admin_settings() {
 							</div> 
 						</div> 
 						</div>
+						<div id="postbox-container-1" class="postbox-container" > 
+						
+						<div id="dashboard_right_now" class="postbox">
+							<div class="handlediv" > <br> </div>
+							<h3 class="hndle" > Advertisement</h3> 
+							<div class="inside"> 
+									<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+									<!-- large rect -->
+									<ins class="adsbygoogle"
+										 style="display:inline-block;width:336px;height:280px"
+										 data-ad-client="ca-pub-9927149984527168"
+										 data-ad-slot="1808932139"></ins>
+									<script>
+									(adsbygoogle = window.adsbygoogle || []).push({});
+									</script>							
+							</div> 
+						</div> 
+						</div>
 						<div id="postbox-container-2" class="postbox-container" > 
 						<div id="dashboard_quick_press" class="postbox">
 							<div class="handlediv" > <br> </div>
