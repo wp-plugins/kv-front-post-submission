@@ -1,5 +1,5 @@
 ﻿=== Plugin Name ===
-Contributor: Varadharaj
+Contributor: kvvaradha
 Donate link: http://www.kvcodes.com
 Tags: front end post, pages, post submit, 
 Requires at least: 3.7
