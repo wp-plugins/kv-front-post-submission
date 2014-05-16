@@ -4,8 +4,6 @@ Donate link: http://www.kvcodes.com
 Tags: front end post, pages, post submit, 
 Requires at least: 3.7
 Tested up to: 3.8.1
-Stable tag: 3.2
-
 
 
 == Description ==
