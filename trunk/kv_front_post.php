@@ -5,7 +5,7 @@ Plugin URI: http://wordpress.org/plugins/kv-front-post-submission/
 Description: A simple wordpress plugin for front-end post submission
 Version: 1.0
 Author: Varadharaj	
-Author URI: http://www.kvcodes.com
+Author URI: http://profiles.wordpress.org/kvvaradha
 */
 define('KV_PLUGIN_URL', plugin_dir_url( __FILE__ ));
 define('KV_SUBMIT_VERSION', '1.0');
