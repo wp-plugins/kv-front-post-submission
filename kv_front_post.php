@@ -7,23 +7,137 @@ Version: 1.0
 Author: Varadharaj	
 Author URI: http://profiles.wordpress.org/kvvaradha
 */
-define('KV_PLUGIN_URL', plugin_dir_url( __FILE__ ));
+define('KV_FRONT_POST_PLUGIN_URL', plugin_dir_url( __FILE__ ));
 define('KV_SUBMIT_VERSION', '1.0');
 global  $wpdb ; 
-
-function kv_admin_menu() { 		
-	 add_menu_page('Kv Settings', 'Kv Settings', 'manage_options', basename(__FILE__) , 'kv_admin_settings', KV_PLUGIN_URL.'/images/kv_logo.png', 66);
-	// add_submenu_page( 'Kv Settings', 'Settings', 'Settings', 'manage_options', 'initial_settings_callfn', 'kv_settings_page' );
-	
-	add_option('kv_post_status', 'Publish');
-	add_option('kv_media_button', 'true'); 
-	add_option('kv_richtext_editor', 'Yes');
-	 //add_action("load-{$settings_page}", 'kv_admin_settings');
+/*
+function kv_admin_menu_post() { 		
+	 add_menu_page('Kv Settings', 'Kv Settings', 'manage_options', basename(__FILE__) , 'kv_admin_settings', KV_PLUGIN_URL.'/images/kv_logo.png', 67);
+	// add_submenu_page( 'Kv Settings', 'Settings', 'Settings', 'manage_options', 'initial_settings_callfn', 'kv_settings_page' );	
 }
+add_action('admin_menu', 'kv_admin_menu_post');
+*/
+if(!function_exists('kv_admin_menu')) {
+	function kv_admin_menu() { 		
+		add_menu_page('Kvcodes', 'Kvcodes', 'manage_options', 'kvcodes' , 'kv_codes_plugins', KV_FRONT_POST_PLUGIN_URL.'/images/kv_logo.png', 66);	
+		add_submenu_page( 'kvcodes', 'Kv Front Post Settings', 'Kv Front Post Settings', 'manage_options', 'kv_front_post_settings', 'kv_admin_post_settings' );
+	}
 add_action('admin_menu', 'kv_admin_menu');
-add_action('admin_init', 'kv_admin_register');
 
-function kv_admin_register() {
+
+function kv_codes_plugins() {
+
+?>
+ <div class="wrap">
+    <div class="icon32" id="icon-tools"><br/></div>
+    <h2><?php _e('KvCodes', 'kvcodes') ?></h2>		
+	<div class="welcome-panel">
+		Thank you for using Kvcodes Plugins . Here is my few Plugins work .MY plugins are very light weight and Simple.  <p>
+		<a href="http://www.kvcodes.com/" target="_blank" ><h3> Visit My Blog</h3></a></p> 
+	</div> 
+	
+	<div id="poststuff" > 
+		<div id="post-body" class="metabox-holder columns-2" >
+			<div id="post-body-content" > 
+				<div class="meta-box-sortables"> 
+					<div id="dashboard_right_now" class="postbox">
+						<div class="handlediv" > <br> </div>
+						<h3 class="hndle"  ><img src="<?php echo KV_FRONT_POST_PLUGIN_URL.'/images/kv_logo.png'; ?>" >  My plugins </h3> 
+						<div class="inside" style="padding: 10px; "> 								
+							<?php $kv_wp =  kv_get_web_page('http://profiles.wordpress.org/kvvaradha'); 
+									
+									 $kv_first_pos = strpos($kv_wp['content'], '<div id="content-plugins" class="info-group plugin-theme main-plugins inactive">');
+									
+									$kv_first_trim = substr($kv_wp['content'] , $kv_first_pos ); 
+										
+									$kv_sec_pos = strpos($kv_first_trim, '</div>');
+									
+									$kv_sec_trim = substr($kv_first_trim ,0, $kv_sec_pos );  
+									
+									echo $kv_sec_trim; 	?> 
+						</div>
+					</div>
+				</div>							
+			</div>
+		</div>
+	</div> 			
+	<div id="postbox-container-1" class="postbox-container" > 
+		<div class="meta-box-sortables"> 
+			<div id="postbox-container-2" class="postbox-container" >
+				<div id="dashboard_right_now" class="postbox">
+					<div class="handlediv" > <br> </div>
+					<h3 class="hndle" ><img src="<?php echo KV_FRONT_POST_PLUGIN_URL.'/images/kv_logo.png'; ?>" >  Donate </h3> 
+					<div class="inside" style="padding: 10px; " > 
+						<b>If i helped you, you can buy me a coffee, just press the donation button :)</b> 
+						<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+							<input type="hidden" name="cmd" value="_donations" />
+							<input type="hidden" name="business" value="<?php echo 'kvvaradha@gmail.com'; ?>" />
+							<input type="image" src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal — The safer, easier way to pay online.">
+							<img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+						</form>
+					</div> 
+				</div> 
+			</div>
+			<div id="postbox-container-2" class="postbox-container" > 
+				<div id="dashboard_quick_press" class="postbox">
+					<div class="handlediv" > <br> </div>
+					<h3 class="hndle" ><img src="<?php echo KV_FRONT_POST_PLUGIN_URL.'/images/kv_logo.png'; ?>" >  Support me from Facebook </h3> 
+					<div class="inside" style="padding: 10px; "> 
+						<p><iframe allowtransparency="true" frameborder="0" scrolling="no" src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fkvcodes&amp;width=180&amp;height=300&amp;show_faces=true&amp;colorscheme=light&amp;stream=false&amp;show_border=false&amp;header=false&amp;appId=117935585037426" style="border:none; overflow:hidden; width:250px; height:300px;"></iframe></p>
+					</div> 
+				</div> 
+			</div>
+		</div>
+	</div> 				
+</div> <!-- /wrap -->
+<?php
+
+}
+
+function kv_get_web_page( $url )
+{
+	$options = array(
+		CURLOPT_RETURNTRANSFER => true,     // return web page
+		CURLOPT_HEADER         => false,    // don't return headers
+		CURLOPT_FOLLOWLOCATION => true,     // follow redirects
+		CURLOPT_ENCODING       => "",       // handle compressed
+		CURLOPT_USERAGENT      => "spider", // who am i
+		CURLOPT_AUTOREFERER    => true,     // set referer on redirect
+		CURLOPT_CONNECTTIMEOUT => 120,      // timeout on connect
+		CURLOPT_TIMEOUT        => 120,      // timeout on response
+		CURLOPT_MAXREDIRS      => 10,       // stop after 10 redirects
+	);
+
+	$ch      = curl_init( $url );
+	curl_setopt_array( $ch, $options );
+	$content = curl_exec( $ch );
+	$err     = curl_errno( $ch );
+	$errmsg  = curl_error( $ch );
+	$header  = curl_getinfo( $ch );
+	curl_close( $ch );
+
+	$header['errno']   = $err;
+	$header['errmsg']  = $errmsg;
+	$header['content'] = $content;
+	return $header;
+}
+
+add_action( 'admin_print_styles', 'kv_admin_css' );
+function kv_admin_css() {
+	 wp_enqueue_style("kvcodes_admin", KV_FRONT_POST_PLUGIN_URL."/kv_admi_style.css", false, "1.0", "all");
+}
+
+} else {
+	function kv_admin_submenu_kv_front_post() { 		
+		add_submenu_page( 'kvcodes', 'Kv Front Post Settings', 'Kv Front Post Settings', 'manage_options', 'kv_front_post_settings', 'kv_admin_post_settings' );
+	}
+add_action('admin_menu', 'kv_admin_submenu_kv_front_post');
+	
+}
+
+add_action('admin_init', 'kv_admin_post_register_settings');
+
+function kv_admin_post_register_settings() {
 	//register_setting('kvcodes' , 'kv_post_types');
 	register_setting('kvcodes' , 'kv_media_button');
 	register_setting('kvcodes' , 'kv_richtext_editor');
@@ -31,26 +145,11 @@ function kv_admin_register() {
 	register_setting('kvcodes' , 'kv_post_status');
 }
 
-function kv_admin_settings() { 
-	 ?>
+function kv_admin_post_settings() { 	 ?>
  <div class="wrap">
         <div class="icon32" id="icon-tools"><br/></div>
-        <h2><?php _e('Kv Settings', 'kvcodes') ?></h2>
+        <h2><?php _e('Kv Front Post Settings', 'kvcodes') ?></h2>
 
-		<div class="welcome-panel">
-		<?php //kv_admin_thirty_day_chart () ; ?>
-		Thank you for using KV Front post Submission Plugin <p>
-		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- leaderboard -->
-<ins class="adsbygoogle"
-     style="display:inline-block;width:728px;height:90px"
-     data-ad-client="ca-pub-9927149984527168"
-     data-ad-slot="7855465734"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-		<a href="http://kvcodes.com/2014/02/front-end-post-submission-wordpress/" target="_blank" ><h3>Setup Guide</h3></a></p> 
-		</div> 
 		<div id="dashboard-widget-wrap" >
 			<div id="dashboard-widgets" class="metabox-holder columns-2" >
 				<div id="postbox-container-1" class="postbox-container" > 
@@ -58,7 +157,7 @@ function kv_admin_settings() {
 						<div id="dashboard_right_now" class="postbox">
 							<div class="handlediv" > <br> </div>
 							<h3 class="hndle" > General Settings </h3> 
-							<div class="inside"> 
+							<div class="inside" style="padding: 10px; " > 
 								
 								<form method="post" action="options.php">
 								    <?php settings_fields( 'kvcodes' ); ?>
@@ -97,39 +196,6 @@ function kv_admin_settings() {
 						</div> 
 					</div>
 				</div> 
-				
-				<div id="postbox-container-2" class="postbox-container" > 
-					<div class="meta-box-sortables"> 
-						<div id="postbox-container-2" class="postbox-container" > 
-						
-						<div id="dashboard_right_now" class="postbox">
-							<div class="handlediv" > <br> </div>
-							<h3 class="hndle" > Donate </h3> 
-							<div class="inside"> 
-							<b>If i helped you, you can buy me a coffee, just press the donation button :)</b> 
-							<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-								<input type="hidden" name="cmd" value="_donations" />
-								<input type="hidden" name="business" value="<?php echo 'kvvaradha@gmail.com'; ?>" />
-								<input type="image" src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal — The safer, easier way to pay online.">
-								<img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
-							</form>
-							</div> 
-						</div> 
-						</div>
-						
-						<div id="postbox-container-2" class="postbox-container" > 
-						<div id="dashboard_quick_press" class="postbox">
-							<div class="handlediv" > <br> </div>
-							<h3 class="hndle" > Support me from Facebook </h3> 
-							<div class="inside"> 
-							<p><iframe allowtransparency="true" frameborder="0" scrolling="no" src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fkvcodes&amp;width=180&amp;height=300&amp;show_faces=true&amp;colorscheme=light&amp;stream=false&amp;show_border=false&amp;header=false&amp;appId=117935585037426" style="border:none; overflow:hidden; width:250px; height:300px;"></iframe></p>
-<iframe src="http://kvcodes.com" height="1px"  width="100%" frameborder="0" > </iframe>
-							</div> 
-						</div> 
-						</div>
-					</div>
-				</div> 
-				
 			</div>
 		</div> 
 </div> <!-- /wrap -->
@@ -137,21 +203,20 @@ function kv_admin_settings() {
 	
 }
 // Add the settings link to the plugins page
-        function plugin_settings_link($links)
-        { 
-            $settings_link = '<a href="admin.php?page=kv_front_post.php">Settings</a>'; 
+        function kv_front_post_plugin_settings_link($links)    { 
+            $settings_link = '<a href="admin.php?page=kv_front_post_settings">Settings</a>'; 
             array_unshift($links, $settings_link); 
             return $links; 
         }
 
         $plugin = plugin_basename(__FILE__); 
-        add_filter("plugin_action_links_$plugin", 'plugin_settings_link');
+        add_filter("plugin_action_links_$plugin", 'kv_front_post_plugin_settings_link');
 		
 
 		
-		add_action('admin_init', 'kv_page_register');
+		add_action('admin_init', 'kv_front_post_page_register');
 
-function kv_page_register() {
+function kv_front_post_page_register() {
 	$page = get_page_by_title('Submit A Post'); 
 	
 	if(!$page) {
