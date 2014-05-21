@@ -7,7 +7,7 @@ Tested up to: 3.8.1
 Stable tag: 1.1
 License: GPLv3
 
-Front pos tsubmiison is a simple plugin to submit wordpress posts from the front end.
+Front post Submission is a simple plug-in to submit WordPress posts from the front end.
 
 == Description ==
 
