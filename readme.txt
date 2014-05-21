@@ -1,14 +1,18 @@
-﻿=== Plugin Name ===
+﻿=== KV Front-end Post Submission ===
 Contributors: kvvaradha
 Donate link: http://www.kvcodes.com
 Tags: front end post, pages, post submit, 
 Requires at least: 3.7
 Tested up to: 3.8.1
 Stable tag: 1.1
+License: GPLv3
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+
 
 == Description ==
  It helps to submit your posts from your theme front end. Also you can have few admin options to configure your settings. Still its a minimum pack, i will update full control to navigate these things. Read  <a href="http://kvcodes.com/2014/02/front-end-post-submission-wordpress/" > Kvcodes.com </a> 
 
+ 
 == Installation ==
 
 * Download
@@ -17,8 +21,7 @@ Stable tag: 1.1
 * To know how to Make settings go to [www.kvcodes.com]
 
 
+
 == Screenshots ==
-
-
 
 1. Screenshot of front page Post submit  Form.
