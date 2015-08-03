@@ -2,8 +2,8 @@
 /*
 Plugin Name: KV Front-end Post Submission
 Plugin URI: http://wordpress.org/plugins/kv-front-post-submission/
-Description: A simple wordpress plugin for front-end post submission
-Version: 1.0
+Description: A simple wordpress plugin for front-end post submission <a href="http://www.kvcodes.com" target="_blank" > Read more </a> 
+Version: 1.1
 Author: Varadharaj	
 Author URI: http://profiles.wordpress.org/kvvaradha
 */

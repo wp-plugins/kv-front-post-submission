@@ -3,7 +3,7 @@ Contributors: kvvaradha
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=kvvaradha@gmail.com&item_name=Kv Front Post Submission
 Tags: front end post, pages, post submit, kvcodes
 Requires at least: 3.7
-Tested up to: 3.8.1
+Tested up to: 4.1
 Stable tag: 1.1
 License: GPLv3
 
